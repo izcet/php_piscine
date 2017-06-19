@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			function popup( text ) {
+				alert(text);
+			}
+
+			function output( text ) {
+				popup(text);
+				console.log(text);
+			}
+
+			function docalc() {
+				var first = document.getElementById("first").value;
+				var second = document.getElementById("second").value;
+				var symbol = document.getElementById("sign").value;
+				if (first === String(parseInt(first, 10))) {
+					if (second === String(parseInt(second, 10))) {
+						first = parseInt(first, 10);
+						second = parseInt(second, 10);
+						if (first >= 0 && second >= 0) {
+							if ((symbol == 4 || symbol == 5) && (second == 0)) {
+								output("It's over 9000!");
+								} else {
+								switch (symbol) {
+									case '1':
+										output((first + second));
+										break;
+									case '2':
+										output(first - second);
+										break;
+									case '3':
+										output(first * second);
+										break;
+									case '4':
+										output(first / second);
+										break;
+									case '5':
+										output(first % second);
+										break;
+									default:
+										popup("How did we get here?");
+										break;
+								}
+							}
+							} else {
+							popup("Error :(");
+						}
+
+						} else {
+						popup("Error :(");
+					}
+					} else {
+					popup("Error :(");
+				}
+			}
+			setInterval(function(){popup("Please, use me...")}, 30000);
+		</script>
+		<title>ONE plus 2</title>
+		<style>
+		</style>
+	</head>
+	<body>
+		<form onsubmit="docalc()">
+			<input id="first" type="text">
+			<select id="sign">
+				<option value="1">+</option>
+				<option value="2">-</option>
+				<option value="3">*</option>
+				<option value="4">/</option>
+				<option value="5">%</option>
+			</select>
+			<input id="second" type="text">
+			<input id="submit" type="submit" value="Try me!">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+
+<- Grid -----------------------------------------------------------------------
+The Grid class handles a single game square.
+
+An instance can be constructed from an X and Y:
+	
+	new Grid( $x, $y);
+
+
+The class contains the following variables :
+
+	width
+		Number of Cells wide
+	height
+		Number of Cells high
+
+
+	contents
+		Stores the object occupying this cell, or NULL if empty.
+
+
+The class provides the following methods :
+
+	$object		set( $object);
+		Sets the contents of this cell to the given object.
+		Returns the previous contents of the cell.
+
+	$object 	get();
+		Returns the contents of the cell;
+
+	void		clear();
+		Clears the cells contents;
+
+	bool		is_empty();
+		Returns true if the cell has no contents, and false otherwise.
+
+----------------------------------------------------------------------- Grid ->

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			var colors = { 'red': 'green', 'green': 'blue', 'blue': 'red' };
+			var current = 'red';
+			var size = 200;
+			var rad = 100;
+
+			function grow(x) {
+				x.style.backgroundColor = colors[current];
+				current = colors[current];
+				if (size >= 420) {
+					size = 200;
+					rad = 100;
+					} else {
+					size+=10;
+					rad+=5;
+				}
+				x.style.borderRadius = "" + rad + "px";
+				x.style.width = "" + size + "px";
+				x.style.height = "" + size + "px";
+			}
+
+			function shrink(x) {
+				x.style.backgroundColor = colors[colors[current]];
+				current = colors[colors[current]];
+				if (size > 200) {
+					size-=10;
+					rad-=5;
+					} else {
+					size = 200;
+					rad = 100;
+				}
+				x.style.borderRadius = "" + rad + "px";
+				x.style.width = "" + size + "px";
+				x.style.height = "" + size + "px";
+			}
+
+
+		</script>
+		<title>Bloons Defense Tower</title>
+		<style>
+			.balloon {
+				background-color: red;
+				border-radius: 100px;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="balloon" onclick="grow(this)" onmouseleave="shrink(this)"></div>
+	</body>
+</html>

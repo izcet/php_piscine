@@ -1,0 +1,10 @@
+
+<- Dice -----------------------------------------------------------------------
+The Dice class handles random number generation for a six sided die (D6).
+
+The class provides the following methods :
+
+	int		roll( num_dice);
+		Returns a random number equal to the sum of the successive rolls of a given
+		number of dice.
+----------------------------------------------------------------------- Dice ->

@@ -1,0 +1,54 @@
+
+<- Vector ----------------------------------------------------------------------
+The Vector class handles points in space.
+
+An instance can be contructed from distict destination and origin attributes 
+new Vector( array( 'dest' => new Vertex (...), 'orig' => new Vertex (...) ) );
+
+Dest is mandatory.
+Orig is optional, by default it is new Vertex( 0, 0, 0, 1).
+Any other use is undefined behaviour.
+
+The class provides the following methods :
+
+float	getX();
+Returns the Vector's current x value.
+
+float	getY();
+Returns the Vector's current y value.
+
+float	getZ();
+Returns the Vector's current z value.
+
+float	getW();
+Returns the Vector's current w value.
+
+float	magnitute();
+Returns the Vector's length or norm.
+
+Vector	normalize();
+Returns a normalized version of the vector. 
+If the vector is already normal, it returns a fresh copy.
+
+Vector	add( Vector $rhs );
+Returns a new Vector sum of both vectors.
+
+Vector	sub( Vector $rhs );
+Returns a new Vector difference of both vectors.
+
+Vector	opposite();
+Returns the opposite vector.
+
+Vector	scalarProduct( $k );
+Returns a new Vector  multiplication of the Vector with a scalar.
+
+float	dotProduct( Vector $rhs );
+Returns a new Vector from the scalar multiplication of both.
+
+float	cos( Vector $rhs );
+Returns the angle's Appendix cosine between both vectors.
+
+Vector	crossProduct( Vector $rhs );
+Returns the cross multiplication of both Vectors.
+Uses a Right-Handed coordinate system.
+---------------------------------------------------------------------- Vector ->

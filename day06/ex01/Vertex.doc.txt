@@ -1,0 +1,45 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles points in space.
+
+An instance can be contructed from distict x, y, z values:
+new Vertex( array( 'x' => 0, 'y' => 10, 'z' => 20, 'w' => 2.0, 'color' => $obj);
+
+The x y z and w values are converted to floats.
+W is optional and by default 1.0.
+Color is optional and by default a new instance of Color white.
+Any other use is undefined behaviour.
+
+The class provides the following methods :
+
+void	set_x( $new_x );
+Updates the Vertex's x value.
+
+float	get_x();
+Returns the Vertex's current x value;
+
+void	set_y( $new_y );
+Updates the Vertex's y value.
+
+float	get_y();
+Returns the Vertex's current y value;
+
+void	set_z( $new_z );
+Updates the Vertex's z value.
+
+float	get_z();
+Returns the Vertex's current z value;
+
+void	set_w( $new_w );
+Updates the Vertex's w value.
+
+float	get_w();
+Returns the Vertex's current w value;
+
+Color	set_color( Color $c );
+Updates the Vertex's Color value to the input provided.
+Returns the Vertex's old color value.
+
+Color	get_color();
+Returns the Vertex's current Color value;
+---------------------------------------------------------------------- Vertex ->
